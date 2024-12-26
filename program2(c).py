@@ -1,12 +1,19 @@
 # 2.l. Generate first n prime numbers
-def first_n_primes(n):
-    """Generate the first n prime numbers."""
-    primes = []
-    num = 2
-    while len(primes) < n:
-        if is_prime(num):
-            primes.append(num)
-        num += 1
-    return primes
+def genrateprime(n):
+    flag=False
+    count=0
+    i=2
+    while(count<n):
+        flag=True
+        for j in range(2,int(i**0.5)+1):
+            if i%j==0:
+                flag=False
+                break
+            else:
+                flag=True
+        if flag :
+            print(i)
+            count+=1
+        i+=1
 n=int(input("enter the amount of primes you want"))
-print(f"The first {n} prime numbers: {first_n_primes(n)}")
+genrateprime(n)
