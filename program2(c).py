@@ -5,7 +5,7 @@ def genrateprime(n):
     i=2
     while(count<n):
         flag=True
-        for j in range(2,int(i**0.5)+1):
+        for j in range(2,i):
             if i%j==0:
                 flag=False
                 break
