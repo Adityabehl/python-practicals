@@ -9,8 +9,6 @@ def genrateprime(n):
             if i%j==0:
                 flag=False
                 break
-            else:
-                flag=True
         if flag :
             print(i)
             count+=1
